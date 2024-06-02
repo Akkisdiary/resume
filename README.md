@@ -1,8 +1,11 @@
-# resume
+# Resume
 LaTeX template for my personal resume
 
-Based off of [sb2nov/resume](https://github.com/sb2nov/resume/)
+Based off of [jakegut/resume](https://github.com/jakegut/resume)
 
-Use it on overleaf: [Jake's Resume](https://www.overleaf.com/latex/templates/jakes-resume/syzfjbzwjncs) (Not updated)
+### Build using Docker
 
-![Resume Preview](resume.png)
+```sh
+docker build -t latex .
+docker run --rm -i -v "$PWD":/data latex pdflatex resume.tex
+```

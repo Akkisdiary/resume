@@ -66,36 +66,35 @@
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[1]{
-    \item\small{
-        {#1}
-    }
+    \item
+        \small{#1}
 }
 
 \newcommand{\classesList}[4]{
-    \item\small{
-        {#1 #2 #3 #4 \vspace{-2pt}}
-    }
+    \item
+        \small{{#1 #2 #3 #4 \vspace{-2pt}}}
 }
 
-\newcommand{\resumeSubheading}[2]{
+\newcommand{\resumeSubheading}[3]{
     \item
         \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
-        \textbf{#1} & \textbf{\small #2}
-    \end{tabular*}\vspace{-7pt}
+        \textbf{#1}, \small{#2} & \textbf{\small #3}
+        \end{tabular*}\vspace{-4pt}
 }
 
 \newcommand{\resumeSubSubheading}[2]{
     \item
+        \vspace{-2pt}
         \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
         \textit{\small#1} & \textit{\small #2}
-    \end{tabular*}\vspace{-7pt}
+        \end{tabular*}\vspace{-4pt}
 }
 
 \newcommand{\resumeProjectHeading}[1]{
     \item
-    \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
-    \small#1\\
-    \end{tabular*}\vspace{-7pt}
+        \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
+        \small#1\\
+        \end{tabular*}\vspace{-4pt}
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
@@ -135,7 +134,7 @@
 \section{Professional Experience}
 \resumeSubHeadingListStart
     \resumeSubheading
-    {Wiser Solutions, Inc.}{July 2021 - Present}
+    {Wiser Solutions, Inc.}{Pune, India}{July 2021 - Present}
     \resumeSubSubheading
     {Software Engineer 1}{Mar 2023 - Present}
     \resumeItemListStart
@@ -171,9 +170,9 @@
     \resumeItemListEnd
 
     \resumeSubheading
-    {Mind Code System}{Aug 2020 - Feb 2021}
+    {Mind Code Systems}{Pune, India}{Aug 2020 - Feb 2021}
     \resumeSubSubheading
-    {Python Trainee}{}
+    {Python Trainee}{Aug 2020 - Feb 2021}
         \resumeItemListStart
             \resumeItem
             {Developed \textbf{POC} for document management Web App using \textbf{Python, Flask, HTML, JavaScript and jQuery} supporting CRUD operations.}
@@ -193,7 +192,7 @@
 \section{Education}
 \resumeSubHeadingListStart
     \resumeSubheading
-    {DY Patil Institute of Engineering, Pune}{June 2020}
+    {DY Patil Institute of Engineering}{Pune}{June 2020}
     \resumeSubSubheading
     {Bachelor of Engineering in Computer Science (SGPA of 7.91)}{Pune, India}
 \resumeSubHeadingListEnd
@@ -203,16 +202,20 @@
 \section{Key Projects}
 \resumeSubHeadingListStart
     \resumeProjectHeading
-    {\textbf{Portfolio Allocation} $|$ \emph{TypeScript, React JS, Python, Flask} $|$ Personal Project $|$ \href{https://github.com/Akkisdiary/portfolio-allocation}{Github \faExternalLink*} $|$ \href{https://portfolio-allocation.netlify.app/}{Live Link \faExternalLink*}}
+    {\textbf{Portfolio Allocation} $|$ Personal Project $|$ \href{https://github.com/Akkisdiary/portfolio-allocation}{Github \faExternalLink*} $|$ \href{https://portfolio-allocation.netlify.app/}{Live Link \faExternalLink*}}
         \resumeItemListStart
+            \resumeItem
+            {Techstack: \textbf{TypeScript, React JS, Python, Flask}}
             \resumeItem
             {Developed a \textbf{SPA} using \textbf{React JS} where users can visualize their \textbf{Stock Portfolio Allocation} by Industry, Sector, Exchange, Country and Currency.}
             \resumeItem
-            {The user is able to search and add stock tickers from global markets with their live prices and update their holding quantity. Stock symbol and live prices are scraped using \textbf{Flask Restful Back-End} from \emph{TradingView.com}.}
+            {The user is able to search and add stock tickers from global markets with their live prices and update their holding quantity. Stock symbol and live prices are scraped using \textbf{Flask Restful Back-End} from \textit{TradingView.com}.}
         \resumeItemListEnd
         \resumeProjectHeading
-        {\textbf{Secure Multi-Modal Summarization} $|$ \emph{Python, NLP, NLTK} $|$ Academic Project}
+        {\textbf{Secure Multi-Modal Summarization} $|$ Academic Project}
         \resumeItemListStart
+            \resumeItem
+            {Techstack: \textbf{Python, NLP, NLTK}}
             \resumeItem
             {Used the \textbf{LexRank Algorithm} derived from \textbf{Google's PageRank Algorithm} to create a system to extract a summary of a textual document. Multiple modes of information are supported like text, audio and video.}
             \resumeItem
@@ -224,13 +227,22 @@
 \section{Achievements}
 \resumeItemListStart
     \resumeItem
-    {Awarded \textbf{`Star Performer Award'} for the quarter ending December 2023 at Wiser Solutions. \href{https://drive.google.com/file/d/11RvsYKlJ9UAnp2LHTLOc-FF-gGJzbBXb/view?usp=sharing}{\faExternalLink*}}
+    {Awarded \textbf{`Star Performer Award'} for the quarter ending \textbf{December 2023} at Wiser Solutions. \href{https://drive.google.com/file/d/11RvsYKlJ9UAnp2LHTLOc-FF-gGJzbBXb/view?usp=sharing}{\faExternalLink*}}
     \resumeItem
-    {Awarded \textbf{`Star Performer Award'} for the quarter ending September 2022 at Wiser Solutions. \href{https://drive.google.com/file/d/1SLFl3xMEQQykWYrRkAzT4aPqpjl47jUr/view?usp=share_link}{\faExternalLink*}}
+    {Awarded \textbf{`Star Performer Award'} for the quarter ending \textbf{September 2022} at Wiser Solutions. \href{https://drive.google.com/file/d/1SLFl3xMEQQykWYrRkAzT4aPqpjl47jUr/view?usp=share_link}{\faExternalLink*}}
     \resumeItem
-    {Awarded \textbf{Best Hack day Project (2022)} at Wiser Solutions.}
+    {Awarded \textbf{`Best Hack day Project (2022)'} at Wiser Solutions.}
     \resumeItem
-    {Secured \textbf{1st rank} in district-level Science Olympiad (2012).}
+    {Secured \textbf{1st rank} in district-level \textbf{Science Olympiad (2012)}.}
+\resumeItemListEnd
+
+
+\section{Certifications}
+\resumeItemListStart
+    \resumeItem
+    {\textbf{IBM}: Machine Learning with Python. \href{https://drive.google.com/file/d/12Ia915pkCQcdrRhdlW5tJYu7HmfnpsRj/view?usp=sharing}{\faExternalLink*}}
+    \resumeItem
+    {\textbf{SkillUp Academy}: Foundation of Artificial Intelligence verified by NASSCOM Futureskills. \href{https://drive.google.com/file/d/1Y4Bm4yFah4c1AELEQ0Li6PR0jnRhj-1W/view?usp=sharing}{\faExternalLink*}}
 \resumeItemListEnd
  
 

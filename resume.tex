@@ -1,243 +1,100 @@
-%-------------------------
-% Resume in Latex
-% Author : Akshay Shegaonkar Based off of: https://github.com/jakegut/resume
-% License : MIT
-%------------------------
+\documentclass[11pt]{article}       % set main text size
+\usepackage[letterpaper,            % set paper size to letterpaper. change to a4paper for resumes outside of North America
+top=0.5in,                          % specify top page margin
+bottom=0.5in,                       % specify bottom page margin
+left=0.5in,                         % specify left page margin
+right=0.5in]{geometry}              % specify right page margin
+                       
+\usepackage{XCharter}               % set font. comment this line out if you want to use the default LaTeX font Computer Modern
+\usepackage[T1]{fontenc}            % output encoding
+\usepackage[utf8]{inputenc}         % input encoding
+\usepackage{enumitem}               % enable lists for bullet points: itemize and \item
+\usepackage[hidelinks]{hyperref}    % format hyperlinks
+\usepackage{titlesec}               % enable section title customization
+\raggedright                        % disable text justification
+\pagestyle{empty}                   % disable page numbering
 
-\documentclass[letterpaper,11pt]{article}
-
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
-\usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
-\usepackage{enumitem}
-\usepackage[hidelinks]{hyperref}
-\usepackage{fancyhdr}
-\usepackage[english]{babel}
-\usepackage{tabularx}
-\usepackage{fontawesome5}
-\usepackage{multicol}
-\setlength{\multicolsep}{-3.0pt}
-\setlength{\columnsep}{-1pt}
+% ensure PDF output will be all-Unicode and machine-readable
 \input{glyphtounicode}
-
-
-%----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
-
-
-\pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.6in}
-\addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1.19in}
-\addtolength{\topmargin}{-.7in}
-\addtolength{\textheight}{1.4in}
-
-\urlstyle{same}
-
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
-
-% Sections formatting
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large\bfseries
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
-% Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
 
-%-------------------------
-% Custom commands
-\newcommand{\resumeItem}[1]{
-    \item
-        \small{#1}
-}
+% format section headings: bolding, size, white space above and below
+\titleformat{\section}{\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule\vspace{-6.5pt}]
 
-\newcommand{\classesList}[4]{
-    \item
-        \small{{#1 #2 #3 #4 \vspace{-2pt}}}
-}
+% format bullet points: size, white space above and below, white space between bullets
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+\setlist[itemize]{itemsep=-2pt, leftmargin=12pt, topsep=7pt} %%% Test various topsep values to fix vertical spacing errors
 
-\newcommand{\resumeSubheading}[3]{
-    \item
-        \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
-        \textbf{#1}, \small{#2} & \textbf{\small #3}
-        \end{tabular*}\vspace{-4pt}
-}
-
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-        \vspace{-2pt}
-        \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
-        \textit{\small#1} & \textit{\small #2}
-        \end{tabular*}\vspace{-4pt}
-}
-
-\newcommand{\resumeProjectHeading}[1]{
-    \item
-        \begin{tabular*}{1.0\textwidth}{l@{\extracolsep{\fill}}r}
-        \small#1\\
-        \end{tabular*}\vspace{-4pt}
-}
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
-\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
-\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}}
-
-
-%----RESUME STARTS HERE-----
+% resume starts here
 \begin{document}
-\begin{center}
-    {\Huge\scshape Akshay Shegaonkar} \\ \vspace{1pt}
-    \href{tel:+919595342495}{\raisebox{-0.2\height}\faPhone\ \underline{+91 9595342495}} ~
-    \href{mailto:shegaonkar.akshay2@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{shegaonkar.akshay2@gmail.com}} ~
-    \href{https://www.linkedin.com/in/akkisdiary/}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/akkisdiary}} ~
-    \href{https://github.com/akkisdiary}{\raisebox{-0.2\height}\faGithub\ \underline{github.com/akkisdiary}}
-\end{center}
 
-%-----------Technical SKILLS-----------
-\section{Technical Skills}
-\resumeItemListStart
-    \resumeItem
-    {\textbf{Technologies}: Python, JavaScript, Shell Script, SQL databases, MongoDB, Git}
-    \resumeItem
-    {\textbf{Cloud Platforms}: AWS cloud (EC2, EKS, S3, VPC, IAM, RDS), Kubernetes, Docker}
-    \resumeItem
-    {\textbf{Tools}: Terraform, Helm, Github Workflows, Coralogix, Prometheus}
-    \resumeItem
-    {\textbf{Frameworks}: Flask, React JS}
-    \resumeItem
-    {\textbf{Development Practices}: SDLC, Agile, CI/CD pipelines, Unit Testing \& test-driven development (TDD)}
-\resumeItemListEnd
+% name
+\centerline{\Huge Akshay Shegaonkar}
 
+\vspace{5pt}
 
-%-----------EXPERIENCE-----------
-\section{Professional Experience}
-\resumeSubHeadingListStart
-    \resumeSubheading
-    {Wiser Solutions, Inc.}{Pune, India}{July 2021 - Present}
-    \resumeSubSubheading
-    {Software Engineer 1}{Mar 2023 - Present}
-    \resumeItemListStart
-        \resumeItem
-        {Migrated a legacy data platform to a scalable distributed system using \textbf{Amazon EKS, Kubernetes, and Docker}. Improved system reliability and enabled processing of over \textbf{200 million} daily transactions, ensuring seamless operations for \textbf{Fortune 500} clients.}
-        \resumeItem
-        {Developed multiple \textbf{microservices} to support the new architecture, streamlining the \textbf{data extraction} process and enhancing platform functionality with new API endpoints.}
-        \resumeItem
-        {Designed and implemented an \textbf{Auto Scaling Group (ASG)} to address critical IP shortages in \textbf{AWS VPCs}, ensuring smooth deployments and scaling capabilities. Enhanced system flexibility and unblocked crucial project timelines.}
-        \resumeItem
-        {Optimized \textbf{CI/CD pipelines} for multiple microservices using \textbf{GitHub Workflows}, streamlining deployment cycles and improving platform reliability. Enhanced development efficiency by resolving deployment bottlenecks.}
-        \resumeItem
-        {Developed a high-performance framework to convert \textbf{HTML documents} into images, reducing response times and resource costs by \textbf{90\%}. Streamlined workflows for cross-functional teams, enabling faster task execution.}
-        \resumeItem
-        {Improved platform observability by leading a migration to \textbf{Coralogix}, enhancing monitoring capabilities and reducing costs. Developed solutions for telemetry agent installation, providing customized configurations for diverse teams.}
-        \resumeItem
-        {Developed a solution to install \textbf{telemetry agents} in worker machines using \textbf{Ansible \& AWX}, providing customized configurations for various teams.}
-        \resumeItem
-        {Developed over \textbf{50 web} scraping bots using \textbf{Python and LXML HTML Parser} to extract precise location-specific data efficiently.}
-        \resumeItem
-        {Created an \textbf{HTTP/2} framework to bypass bot detection, increasing success rates by \textbf{95\%} and cutting reliance on expensive external tools.}
-        \resumeItem
-        {Developed multiple techniques to bypass advanced bot detection systems like Cloudflare, improving data retrieval success rates by \textbf{95\%}.}
-        \resumeItem
-        {Built an internal tool using \textbf{React JS and TypeScript} to monitor bot performance, enabling proactive issue detection and faster resolution. Improved data reliability and reduced client-reported issues.}
-    \resumeItemListEnd
-    \resumeSubheading
-    {Mind Code Systems}{Pune, India}{Aug 2020 - Feb 2021}
-    \resumeSubSubheading
-    {Python Trainee}{Aug 2020 - Feb 2021}
-        \resumeItemListStart
-            \resumeItem
-            {Developed a full-stack end-to-end POC for managing documents with \textbf{CRUD} functionality using \textbf{Python, Flask, and SQLAlchemy.}}
-            \resumeItem
-            {Built a file management system similar to desktop file explorers, supporting renaming, copying, and moving files using \textbf{OOP principles}.}
-            \resumeItem
-            {Helped deploy a \textbf{machine learning} model for grammar correction on \textbf{Azure} by creating \textbf{RESTful APIs} for easy access.}
-            \resumeItem
-            {Developed a user authentication and ticketing system with \textbf{role-based access} for better security and organization.}
-        \resumeItemListEnd
-\resumeSubHeadingListEnd
+% contact information
+\centerline{\href{mailto:shegaonkar.akshay2@gmail.com}{shegaonkar.akshay2@gmail.com} | \href{tel:+919595342495}{+91-9595342495} | \href{https://www.linkedin.com/in/akkisdiary}{linkedin.com/in/akkisdiary}}
 
+\vspace{-10pt}
 
-%-----------EDUCATION-----------
-\section{Education}
-\resumeSubHeadingListStart
-    \resumeSubheading
-    {DY Patil Institute of Engineering}{Pune}{June 2020}
-    \resumeSubSubheading
-    {Bachelor of Engineering in Computer Science (SGPA of 7.91)}{Pune, India}
-\resumeSubHeadingListEnd
+% skills section
+\section*{Skills}
+\textbf{Technologies}: Python, JavaScript, Shell Script, AWS, SQL, NoSQL, Git \\
+\textbf{Tools}: Terraform, Helm, Github Workflows, Coralogix, Prometheus \\
+\textbf{Frameworks}: Flask, React JS \\
+\textbf{Development Practices}: SDLC, Agile, CI/CD pipelines, Unit Testing \& test-driven development (TDD)
+\vspace{-6.5pt}
 
+% experience section
+\section*{Experience}
+\textbf{Software Engineer,} {Wiser Solutions, Inc.} -- Remote \hfill July 2021 -- Present \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Migrated a mission-critical data extraction platform to a distributed architecture on Amazon EKS using Kubernetes and Docker, consolidating multiple systems to support \textbf{200M+ daily traffic}
+  \item Resolved critical network issues by advising a dedicated Auto Scaling Group and Load Balancer to manage IP shortages effectively in a shared environment providing isolation, smooth deployments, and ensuring \textbf{0 downtime}
+  \item Optimized CI/CD pipelines for multiple microservices using GitHub Workflows, streamlining deployment cycles and improving platform reliability. Enhanced development efficiency by resolving deployment bottlenecks
+  \item Developed a high-performance framework to convert HTML documents into images, reducing response times and resource costs by \textbf{90\%}. Streamlined workflows for cross-functional teams, enabling faster task execution
+  \item Led migrating the platform's observability tool to Coralogix by developing solutions to install open telemetry agents using Ansible, AWX, and Jenkins, implemented log filtering at the source, optimized Prometheus metrics collection, and reduced redundant telemetry data. Enhancing observability and monitoring capabilities while \textbf{cutting costs by 60\% and saving \$90K annually} exceeding expectations
+  \item Engineered 50+ web scraping bots and automated scripts using Python capable of providing precise location-specific data, significantly boosting data acquisition accuracy and efficiency
+  \item Developed multiple techniques to bypass advanced bot detection, achieving a \textbf{90-100\% success rate}, improving response time by 40-50\% ensuring high data quality while reducing resource usage
+  \item Led the development of an internal monitoring tool with React JS and TypeScript, enabling rapid issue detection and resolution. Reducing operational issues by 20\%
+\end{itemize}
 
-%-----------PROJECTS-----------
-\section{Key Projects}
-\resumeSubHeadingListStart
-    \resumeProjectHeading
-    {\textbf{Portfolio Allocation} $|$ Personal Project $|$ \href{https://github.com/Akkisdiary/portfolio-allocation}{Github \faExternalLink*} $|$ \href{https://portfolio-allocation.netlify.app/}{Live Link \faExternalLink*}}
-        \resumeItemListStart
-            \resumeItem
-            {Techstack: \textbf{TypeScript, React JS, Python, Flask}}
-            \resumeItem
-            {Developed a \textbf{SPA} using \textbf{React JS} where users can visualize their \textbf{Stock Portfolio Allocation} by Industry, Sector, Exchange, Country and Currency.}
-            \resumeItem
-            {The user is able to search and add stock tickers from global markets with their live prices and update their holding quantity. Stock symbol and live prices are scraped using \textbf{Flask Restful Back-End} from \textit{TradingView.com}.}
-        \resumeItemListEnd
-        \resumeProjectHeading
-        {\textbf{Secure Multi-Modal Summarization} $|$ Academic Project}
-        \resumeItemListStart
-            \resumeItem
-            {Techstack: \textbf{Python, NLP, NLTK}}
-            \resumeItem
-            {Used the \textbf{LexRank Algorithm} derived from \textbf{Google's PageRank Algorithm} to create a system to extract a summary of a textual document. Multiple modes of information are supported like text, audio and video.}
-            \resumeItem
-            {Publish research paper on \href{https://drive.google.com/file/d/1Ik8ADmgQ161ozwnP4DED0riZerrP4JPw/view?usp=sharing}{\textbf{IJAERD Scientific Journal.} \faExternalLink*}}
-        \resumeItemListEnd
-\resumeSubHeadingListEnd
+\textbf{Python Trainee,} {Mind Code Systems} -- Pune, Maharashtra \hfill Aug 2020 - Feb 2021 \\
+\vspace{-9pt}
+\begin{itemize}
+  \item Developed a full-stack proof-of-concept document management web application using Python, Flask, and MySQL, supporting full CRUD operations
+  \item Designed and implemented an object-oriented file hierarchy system replicating File Explorer functionalities for improved data management
+  \item Collaborated on deploying an ML model on Amazon EC2 and built RESTful APIs for automated grammar correction
+  \item Established a secure user authentication system with role-based access control to enhance application security
+\end{itemize}
 
+\vspace{-18.5pt}
 
-\section{Achievements}
-\resumeItemListStart
-    \resumeItem
-    {Awarded \textbf{`Star Performer Award'} for the quarter ending \textbf{December 2023} at Wiser Solutions. \href{https://drive.google.com/file/d/11RvsYKlJ9UAnp2LHTLOc-FF-gGJzbBXb/view?usp=sharing}{\faExternalLink*}}
-    \resumeItem
-    {Awarded \textbf{`Star Performer Award'} for the quarter ending \textbf{September 2022} at Wiser Solutions. \href{https://drive.google.com/file/d/1SLFl3xMEQQykWYrRkAzT4aPqpjl47jUr/view?usp=share_link}{\faExternalLink*}}
-    \resumeItem
-    {Awarded \textbf{`Best Hack day Project (2022)'} at Wiser Solutions.}
-    \resumeItem
-    {Secured \textbf{1st rank} in district-level \textbf{Science Olympiad (2012)}.}
-\resumeItemListEnd
+% projects section
+\section*{Projects}
+\textbf{Portfolio Allocation} \hfill \href{https://github.com/Akkisdiary/portfolio-allocation}{github.com/akkisdiary/portfolio-allocation} \\
+\vspace{-9pt}
+\begin{itemize}
+  \item A SPA where users can visualize their Equity Allocation by Sector, Country, Currency, etc.
+  \item Search and add stock tickers from global markets with their live prices
+  \item Tech-Stack: Python, Flask, TypeScript, React JS
+\end{itemize}
 
+% alternate formatting for projects section
+% \section*{Projects}
+% \begin{itemize}
+%   \item \textbf{QuantSoftware Toolkit:} Open source Python library for data analysis and machine learning for finance
+%   \item \textbf{GitHub Visualization:} Data visualization of Git Log data using D3 to analyze project trends over time
+%   \item \textbf{Recommendation System:} Music and movie recommender systems using collaborative filtering on public datasets
+%   \item \textbf{Mac Setup:} Book that gives step-by-step instructions on setting up developer environment on Mac OS
+% \end{itemize}
 
-\section{Certifications}
-\resumeItemListStart
-    \resumeItem
-    {\textbf{IBM}: Machine Learning with Python. \href{https://drive.google.com/file/d/12Ia915pkCQcdrRhdlW5tJYu7HmfnpsRj/view?usp=sharing}{\faExternalLink*}}
-    \resumeItem
-    {\textbf{SkillUp Academy}: Foundation of Artificial Intelligence verified by NASSCOM Futureskills. \href{https://drive.google.com/file/d/1Y4Bm4yFah4c1AELEQ0Li6PR0jnRhj-1W/view?usp=sharing}{\faExternalLink*}}
-\resumeItemListEnd
- 
+\vspace{-18.5pt}
+
+% education section
+\section*{Education}
+\textbf{DY Patil Institute of Engineering} -- BE in Computer Science \hfill June 2020 \\
 
 \end{document}

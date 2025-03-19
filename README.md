@@ -6,11 +6,5 @@ Based off of [jakegut/resume](https://github.com/jakegut/resume)
 ### Build using Docker
 
 ```sh
-docker build -t latex .
-docker run --rm -i -v "$PWD":/data latex pdflatex resume.tex
-```
-
-or just use the build script
-```sh
-./build.sh
+docker run --rm -i --name latex -v "$PWD":/usr/src/app -w /usr/src/app texlive/texlive pdflatex resume.tex
 ```

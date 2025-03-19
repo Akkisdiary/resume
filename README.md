@@ -9,3 +9,8 @@ Based off of [jakegut/resume](https://github.com/jakegut/resume)
 docker build -t latex .
 docker run --rm -i -v "$PWD":/data latex pdflatex resume.tex
 ```
+
+or just use the build script
+```sh
+./build.sh
+```

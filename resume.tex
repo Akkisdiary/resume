@@ -1,9 +1,11 @@
 \documentclass[11pt]{article}       % set main text size
-\usepackage[letterpaper,            % set paper size to letterpaper. change to a4paper for resumes outside of North America
-top=0.5in,                          % specify top page margin
-bottom=0.5in,                       % specify bottom page margin
-left=0.5in,                         % specify left page margin
-right=0.5in]{geometry}              % specify right page margin
+\usepackage[
+  letterpaper,                      % set paper size to letterpaper. change to a4paper for resumes outside of North America
+  top=0.5in,                        % specify top page margin
+  bottom=0.5in,                     % specify bottom page margin
+  left=0.5in,                       % specify left page margin
+  right=0.5in                       % specify right page margin
+]{geometry}
                        
 \usepackage{XCharter}               % set font. comment this line out if you want to use the default LaTeX font Computer Modern
 \usepackage[T1]{fontenc}            % output encoding
@@ -19,80 +21,88 @@ right=0.5in]{geometry}              % specify right page margin
 \pdfgentounicode=1
 
 % format section headings: bolding, size, white space above and below
-\titleformat{\section}{\bfseries\large}{}{0pt}{}[\vspace{0pt}\titlerule\vspace{-6.5pt}]
+\titleformat{\section}{\bfseries\large}{}{}{}[\titlerule\vspace{-4pt}]
 
 % format bullet points: size, white space above and below, white space between bullets
 \renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
-\setlist[itemize]{itemsep=-2pt, leftmargin=12pt, topsep=7pt} %%% Test various topsep values to fix vertical spacing errors
+\setlist[itemize]{itemsep=-1pt, leftmargin=12pt, topsep=7pt} %%% Test various topsep values to fix vertical spacing errors
 
 % resume starts here
 \begin{document}
 
 % name
 \centerline{\Huge Akshay Shegaonkar}
+% \centerline{\Large Software Engineer}
+\vspace{4pt}
+\centerline{
+  India | \href{mailto:shegaonkar.akshay2@gmail.com}{shegaonkar.akshay2@gmail.com} | \href{tel:+919595342495}{+91-9595342495} | \href{https://www.linkedin.com/in/akkisdiary}{linkedin.com/in/akkisdiary}
+}
 
-\vspace{5pt}
+\section*{Summary}
 
-% contact information
-\centerline{\href{mailto:shegaonkar.akshay2@gmail.com}{shegaonkar.akshay2@gmail.com} | \href{tel:+919595342495}{+91-9595342495} | \href{https://www.linkedin.com/in/akkisdiary}{linkedin.com/in/akkisdiary}}
-
-\vspace{-10pt}
+Engineer with 4+ years of experience driving end-to-end product development and scaling complex systems. Recognized as a T-shaped engineer with depth in backend/data platforms and breadth across frontend, infrastructure, and automation. Known for improving team productivity and delivering reliable, high-impact solutions in fast-moving environments. \\
 
 % skills section
 \section*{Skills}
-\textbf{Languages}: Python, JavaScript, TypeScript, SQL, HTML, CSS, Bash Scripting \\
-\textbf{Frameworks}: Flask, React, REST APIs, Express.js, Selenium, Pandas, OpenTelemetry \\
-\textbf{Tools and Technologies}: AWS, Kubernetes, Docker, Git, Node.js, PostgreSQL, MongoDB, NoSQL, Terraform, Linux \\
-% \textbf{Other}: Software Requirements Engineering, Test-Driven Development (TDD), Continuous Integration / Delivery (CI/CD) \\
-\vspace{-6.5pt}
+
+\begin{itemize}
+  \item \textbf{Languages}: Python, JavaScript, TypeScript, SQL, NoSQL, HTML, CSS, Bash Scripting \\
+  \item \textbf{Frameworks}: Node.js, React, Flask, REST APIs, Express.js, Selenium, Pandas \\
+  \item \textbf{Tools and Technologies}: PostgreSQL, MySQL, MongoDB, AWS, Kubernetes, Docker, Git, Terraform, Linux \\
+  % \item \textbf{Other}: Software Requirements Engineering, Test-Driven Development (TDD), Continuous Integration / Delivery (CI/CD) \\
+\end{itemize}
 
 % experience section
 \section*{Experience}
+
 \textbf{Wiser Solutions, Inc.} -- Remote \\
-\textbf{Software Engineer, Extraction Platform} \hfill Jan 2024 -- Present \\
-\vspace{-9pt}
+
+\textbf{Software Engineer 2, Extraction Platform} \hfill Jan 2024 -- Present \\
+
 \begin{itemize}
-  \item Enhanced and maintained a mission-critical e-commerce data extraction platform used by Fortune 500 companies, enabling data-driven business decisions and handling \textbf{200M+ daily requests} \\
-  \item Migrated from a monolithic system to a distributed microservices architecture using AWS EKS, Kubernetes, and Docker, ensuring \textbf{99.99\%} availability and improving system scalability by \textbf{4x} \\
-  \item Enhanced system observability by consolidating logging, monitoring and tracing with Coralogix, implementing Ansible-based telemetry agent installation, and designing OpenTelemetry filtering rules—reducing monitoring costs by \textbf{\$90K} annually \\
-  \item Developed real-time analytics for extraction pipeline diagnostics with granular data using Prometheus and Grafana, enabling faster issue diagnosis and resolution \\
-  \item Streamlined data transformation by engineering a robust Python-based data pipeline with JSON schema validation, optimizing Kafka queue ingestion and ensuring \textbf{99.9\%} data accuracy \\
-  \item Created a \textbf{thread-safe} module to efficiently share data between multiple threads streamlining data extraction \\
-  \item Accelerated \textbf{CI/CD} pipelines with optimized GitHub Actions, introducing caching and test mocking to cut build times by \textbf{58\%} \\
-  \item Boosted API performance by implementing caching strategies and eliminating redundant calls, reducing response times by \textbf{40\%} \\
+  \item Enhanced and maintained a mission-critical e-commerce data extraction platform used by Fortune 500 companies, enabling data-driven business decisions and handling \textbf{200M+ daily requests}. \\
+  \item Migrated from a monolithic system to a distributed microservices architecture using AWS EKS, Kubernetes, and Docker, ensuring \textbf{99.99\%} availability and improving system scalability by \textbf{4x}. \\
+  \item Built \textbf{MCP server} and \textbf{AI agents} to intelligently detect and fix extraction issues, boosting the bot developer team's productivity by \textbf{20\%}. \\
+  \item Achieved a conservative \textbf{~40\%} reduction in monthly EC2 costs by employing hybrid auto scaling solution while maintaining full service performance and reliability. \\
+  \item Enhanced system observability by consolidating logging, monitoring and tracing with Coralogix, implementing Ansible-based telemetry agent installation, and designing OpenTelemetry filtering rules—reducing monitoring costs by \textbf{\$90K} annually. \\
+  \item Developed real-time analytics for extraction pipeline diagnostics with granular data using Prometheus and Grafana, enabling faster issue diagnosis and resolution. \\
+  \item Streamlined data transformation by engineering a robust Python-based data pipeline with JSON schema validation, optimizing Kafka queue ingestion and ensuring \textbf{99.9\%} data accuracy. \\
+  \item Created a \textbf{thread-safe} module to efficiently share data between multiple threads streamlining data analytics. \\
+  \item Accelerated \textbf{CI/CD} pipelines with optimized GitHub Actions, introducing caching and test mocking to cut build times by \textbf{58\%}. \\
+  \item Boosted API performance by implementing caching strategies and eliminating redundant calls, reducing response times by \textbf{40\%}. \\
 \end{itemize}
-\vspace{-5pt}
+
 \textbf{Associate Engineer, Web Scraping} \hfill July 2021 -- Dec 2023 \\
-\vspace{-9pt}
+
 \begin{itemize}
-  \item Developed and deployed 50+ web scraping bots using Python and LXML HTML Parser, delivering location-specific data to support \textbf{32+ client catalogs} and enhance data-driven decision-making \\ 
-  \item Engineered 10+ advanced anti-bot algorithms by reverse-engineering HTTP and JavaScript challenges to mimic browser fingerprints, increasing crawling success rates from \textbf{10\% to 95\%} and reducing bot detection failures \\
-  \item Built a Chrome extension using React and TypeScript to streamline API testing, enabling engineers to prototype and develop bots \textbf{3x} faster \\
+  \item Developed and deployed 50+ web scraping bots using Python and LXML HTML Parser, delivering location-specific data to support \textbf{32+ client catalogs} and enhance data-driven decision-making. \\
+  \item Engineered 10+ advanced anti-bot algorithms by reverse-engineering HTTP and JavaScript challenges to mimic browser fingerprints, increasing crawling success rates from \textbf{10\% to 95\%} and reducing bot detection failures. \\
+  \item Built a Chrome extension using React and TypeScript to streamline API testing, enabling engineers to prototype and develop bots \textbf{3x} faster. \\
 \end{itemize}
 
-\textbf {Mind Code Systems} -- Pune, Maharashtra \\
-\textbf{Python Trainee, Web Development} \hfill Aug 2020 - Feb 2021 \\
-\vspace{-9pt}
-\begin{itemize}
-  \item Developed and deployed a full-stack web application using Flask, jQuery, SQLAlchemy, PostgreSQL and Heroku enabling AI-powered document management and supporting thousands of user-generated files \\
-  \item Designed and implemented an intuitive object-oriented file organization system, replicating File Explorer functionality to enhance user navigation and boost engagement \\
-  \item Built and optimized RESTful APIs for automated grammar correction, integrating ML models improving document quality and reducing manual editing time \\
-\end{itemize}
+\textbf{Mind Code Systems} -- Pune, Maharashtra \\
 
-\vspace{-18.5pt}
+\textbf{Founding Engineer, Web Development} \hfill Aug 2020 - Feb 2021 \\
+
+\begin{itemize}
+  \item Developed and deployed a full-stack web application from scratch using Flask, jQuery, SQLAlchemy, PostgreSQL and Heroku enabling AI-powered document management and supporting thousands of user-generated files. \\
+  \item Designed and implemented an intuitive object-oriented file organization system, replicating File Explorer functionality to enhance user navigation and boost engagement. \\
+  \item Built and optimized RESTful APIs for automated grammar correction, integrating ML models improving document quality and reducing manual editing time. \\
+\end{itemize}
 
 % projects section
 \section*{Projects}
-\textbf{Portfolio Allocation} \hfill \href{https://github.com/Akkisdiary/portfolio-allocation}{github.com/akkisdiary/portfolio-allocation} \\
-\vspace{-9pt}
-\begin{itemize}
-  \item Created interactive SPA by developing Python/Flask backend and TypeScript/React frontend, enabling users to visualize equity allocations by sector, country, and currency with live global market stock prices \\
-\end{itemize}
 
-\vspace{-18.5pt}
+\textbf{Portfolio Allocation} \hfill \href{https://portfolio-allocation.netlify.app/}{\underline{portfolio-allocation.netlify.app}} \\
+
+\begin{itemize}
+  \item Created interactive SPA by developing Python/Flask backend and TypeScript/React frontend, enabling users to visualize equity allocations by sector, country, and currency with live global market stock prices, \\
+  \item Github: \href{https://github.com/Akkisdiary/portfolio-allocation}{github.com/akkisdiary/portfolio-allocation} \\
+\end{itemize}
 
 % education section
 \section*{Education}
+
 \textbf{DY Patil Institute of Engineering} -- BE in Computer Science \hfill June 2020 \\
 
 \end{document}
